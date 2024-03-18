@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_Home">
+
+    <fragment
+        android:id="@+id/fragment_Home"
+        android:name="com.romakumari.healthjourney.fragment_home"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragment_Home_to_fragment_explore2"
+            app:destination="@id/fragment_explore" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_explore"
+        android:name="com.romakumari.healthjourney.fragment_explore"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore" >
+        <action
+            android:id="@+id/action_fragment_explore_to_fragment_downloads2"
+            app:destination="@id/fragment_downloads2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_downloads2"
+        android:name="com.romakumari.healthjourney.fragment_downloads"
+        android:label="fragment_downloads"
+        tools:layout="@layout/fragment_downloads" >
+        <action
+            android:id="@+id/action_fragment_downloads2_to_fragment_mediaplayer"
+            app:destination="@id/fragment_mediaplayer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_mediaplayer"
+        android:name="com.romakumari.healthjourney.fragment_mediaplayer"
+        android:label="fragment_mediaplayer"
+        tools:layout="@layout/fragment_mediaplayer" />
+</navigation>

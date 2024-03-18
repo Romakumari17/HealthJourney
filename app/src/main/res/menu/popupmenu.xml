@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_blind"
+        android:title="Blind" />
+    <item
+        android:id="@+id/menu_deaf"
+        android:title="Deaf" />
+    <item
+        android:id="@+id/menu_dumb"
+        android:title="Dumb" />
+    <item
+        android:id="@+id/menu_other"
+        android:title="Other" />
+</menu>

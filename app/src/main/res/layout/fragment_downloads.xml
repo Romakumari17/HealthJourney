@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment_downloads">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="sans-serif-medium"
+        android:background="#272727"
+        android:textColor="#FEC5E5"
+        android:id="@+id/downloadfragment"
+        android:gravity="center"
+        android:text="@string/downloads"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="video1"
+        android:id="@+id/video1"
+        android:layout_below="@id/downloadfragment"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="video2"
+        android:id="@+id/video2"
+        android:layout_below="@id/video1"
+        />
+
+
+
+
+</RelativeLayout>
