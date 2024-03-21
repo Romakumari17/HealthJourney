@@ -50,7 +50,7 @@ class fragment_downloads :Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.video1.setOnClickListener {
-            val url = "C:\\Users\\Roma\\OneDrive\\Documents\\yoga app v1.jpg"
+            val url = "C:\\Users\\Roma\\AndroidStudioProjects\\HealthJourney\\app\\src\\main\\res\\raw\\yoga.mp4"
             val fragment = fragment_mediaplayer()
             val args = Bundle()
             args.putString("url", url) // Put any data you want to pass here
@@ -60,7 +60,7 @@ class fragment_downloads :Fragment() {
             findNavController().navigate(R.id.action_fragment_downloads2_to_fragment_mediaplayer, args)
         }
         binding.video2.setOnClickListener {
-            val url = "C:\\Users\\Roma\\OneDrive\\Documents\\yoga app v2.mp4"
+            val url ="C:\\Users\\Roma\\AndroidStudioProjects\\HealthJourney\\app\\src\\main\\res\\raw\\yoga.mp4"
             val fragment = fragment_mediaplayer()
             val args = Bundle()
             args.putString("url", url) // Put any data you want to pass here
