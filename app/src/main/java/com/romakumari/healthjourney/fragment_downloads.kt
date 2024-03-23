@@ -23,7 +23,7 @@ private const val ARG_PARAM2 = "param2"
 class fragment_downloads :Fragment() {
      lateinit var mainActivity: MainActivity
      lateinit var binding: FragmentDownloadsBinding
-     var type = 0
+      var type = 0
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -50,24 +50,24 @@ class fragment_downloads :Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.video1.setOnClickListener {
-            val url = "C:\\Users\\Roma\\AndroidStudioProjects\\HealthJourney\\app\\src\\main\\res\\raw\\yoga.mp4"
+            val url1 = "C:\\Users\\Roma\\AndroidStudioProjects\\HealthJourney\\app\\src\\main\\res\\raw\\yoga.mp4"
             val fragment = fragment_mediaplayer()
             val args = Bundle()
-            args.putString("url", url) // Put any data you want to pass here
+            args.putString("url", url1) // Put any data you want to pass here
             fragment.arguments=args
             requireActivity().supportFragmentManager.beginTransaction().replace(R.id.nav_Host, fragment).commit()
             args.putInt("type", 0)
             findNavController().navigate(R.id.action_fragment_downloads2_to_fragment_mediaplayer, args)
         }
         binding.video2.setOnClickListener {
-            val url ="C:\\Users\\Roma\\AndroidStudioProjects\\HealthJourney\\app\\src\\main\\res\\raw\\yoga.mp4"
+            val url2 ="C:\\Users\\Roma\\AndroidStudioProjects\\HealthJourney\\app\\src\\main\\res\\raw\\yoga.mp4"
             val fragment = fragment_mediaplayer()
-            val args = Bundle()
-            args.putString("url", url) // Put any data you want to pass here
-            fragment.arguments=args
+            val args1 = Bundle()
+            args1.putString("url", url2) // Put any data you want to pass here
+            fragment.arguments=args1
             requireActivity().supportFragmentManager.beginTransaction().replace(R.id.nav_Host, fragment).commit()
-            args.putInt("type", 1)
-            findNavController().navigate(R.id.action_fragment_downloads2_to_fragment_mediaplayer, args)
+            args1.putInt("type", 1)
+            findNavController().navigate(R.id.action_fragment_downloads2_to_fragment_mediaplayer, args1)
          }
     }
 

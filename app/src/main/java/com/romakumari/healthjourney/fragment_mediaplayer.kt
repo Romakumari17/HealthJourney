@@ -54,16 +54,25 @@ class fragment_mediaplayer : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val args = this.arguments
-        val url = args?.getString("url")
-        binding.textUrl.text = url
-        player = ExoPlayer.Builder(requireContext()).build()
-        binding.playerview.player = player
-        val mediaItem =MediaItem.fromUri(Uri.parse(url!!))
+        val url1 = args?.getString("url")
+        binding.textUrl.text = url1
+        ExoPlayerplay()
+        val mediaItem =MediaItem.fromUri(Uri.parse("android.resource://"+mainActivity.packageName+"/"+R.raw.yoga))
         player.setMediaItem(mediaItem)
-        player.prepare()
-        player.play()
+        //second video
+        val args1 = this.arguments
+        val url2 = args1?.getString("url")
+        binding.textUrl.text = url2
+        val mediaItem2 =MediaItem.fromUri(Uri.parse("android.resource://"+mainActivity.packageName+"/"+R.raw.yoga))
+        player.setMediaItem(mediaItem2)
 
         }
+     fun ExoPlayerplay(){
+         player = ExoPlayer.Builder(requireContext()).build()
+         binding.playerview.player = player
+         player.prepare()
+         player.play()
+     }
 
     companion object {
         /**
